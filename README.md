@@ -1,59 +1,31 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+##Proyecto Examenidiomas1
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+###Proceso realizado
+Se creó la migración para la tabla de estudiantes, definiendo los campos necesarios como nombre, teléfono, correo electrónico, idioma, nivel y estado.
 
-## About Laravel
+Se generó el modelo Estudiante, configurado para permitir el manejo de los atributos principales y facilitar las operaciones con la base de datos.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Se construyó el controlador EstudianteController, con los métodos esenciales para el flujo CRUD: listar, crear, almacenar, editar, actualizar y eliminar estudiantes.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Se configuraron las rutas en el archivo principal de Laravel, utilizando la estructura de recurso para conectar automáticamente las acciones del controlador con las direcciones web correspondientes.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Se diseñó la vista principal (index), donde se muestran los estudiantes activos y el historial de los que están pausados, graduados o retirados.
 
-## Learning Laravel
+Se elaboró la vista de creación (create), que contiene el formulario para registrar nuevos estudiantes en el sistema.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Se preparó la vista de edición (edit), que permite modificar los datos de un estudiante ya registrado.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Se creó un layout base, que sirve como plantilla general para todas las vistas y asegura un diseño uniforme en la aplicación.
 
-## Laravel Sponsors
+Se configuró la validación de datos, incluyendo mensajes personalizados para evitar duplicidad en correos electrónicos y garantizar que los campos obligatorios se llenen correctamente.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Se organizó la estructura de carpetas y archivos dentro del proyecto, manteniendo la separación clara entre modelos, controladores, migraciones y vistas.
 
-### Premium Partners
+Finalmente, se inicializó el proyecto en Git, se conectó al repositorio en GitHub llamado Examenidiomas1 y se subieron los archivos siguiendo el flujo estándar de commits y push.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+###EVIDENCIAS
 
-## Contributing
+![Evidencia](images/foto1.png)
+![Evidencia](images/foto2.png)
+![Evidencia](images/foto3.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
