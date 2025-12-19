@@ -1,0 +1,3 @@
+
+DocumentRoot = "public"
+ServerName = idiomas.test
