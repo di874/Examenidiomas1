@@ -26,10 +26,23 @@
                 <td>{{ $e->nivel }}</td>
                 <td>{{ $e->estado }}</td>
                 <td>
+                    <!-- Botón Editar -->
                     <a href="{{ route('estudiantes.edit',$e->id) }}" class="btn btn-warning btn-sm">Editar</a>
+
+                    <!-- Botón Retirar -->
+                    <form action="{{ route('estudiantes.retirar',$e->id) }}" method="POST" style="display:inline">
+                        @csrf @method('PATCH')
+                        <button class="btn btn-secondary btn-sm" onclick="return confirm('¿Seguro que deseas retirar este estudiante?')">
+                            Retirar
+                        </button>
+                    </form>
+
+                    <!-- Botón Eliminar -->
                     <form action="{{ route('estudiantes.destroy',$e->id) }}" method="POST" style="display:inline">
                         @csrf @method('DELETE')
-                        <button class="btn btn-danger btn-sm">Retirar</button>
+                        <button class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que deseas eliminar este estudiante definitivamente?')">
+                            Eliminar
+                        </button>
                     </form>
                 </td>
             </tr>

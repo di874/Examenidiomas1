@@ -34,7 +34,7 @@ class EstudianteController extends Controller
     {
         $request->validate([
             'nombre' => 'required',
-            'telefono' => 'required',
+            'telefono' => 'required|numeric',
             'email' => 'required|email|unique:estudiantes',
             'idioma' => 'required',
             'nivel' => 'required',
@@ -43,6 +43,12 @@ class EstudianteController extends Controller
 
         Estudiante::create($request->all());
         return redirect()->route('estudiantes.index')->with('success','Estudiante registrado');
+
+        $request->validate([
+            'telefono' => 'required|numeric',
+        ], [
+            'telefono.numeric' => 'El teléfono debe contener solo números.',
+        ]);
     }
 
     /**
@@ -81,15 +87,32 @@ class EstudianteController extends Controller
         $estudiante->update($request->all());
 
         return redirect()->route('estudiantes.index')->with('success','Estudiante actualizado correctamente');
+        $request->validate([
+            'telefono' => 'required|numeric',
+        ], [
+            'telefono.numeric' => 'El teléfono debe contener solo números.',
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
+    public function retirar($id)
+    {
+        $estudiante = Estudiante::findOrFail($id);
+        $estudiante->estado = 'retirado';
+        $estudiante->save();
+
+        return redirect()->route('estudiantes.index')->with('success','Estudiante retirado correctamente');
+    }
+
+
     public function destroy($id)
     {
         $estudiante = Estudiante::findOrFail($id);
-        $estudiante->update(['estado'=>'retirado']);
-        return redirect()->route('estudiantes.index')->with('success','Estudiante marcado como retirado');
+        $estudiante->delete();
+
+        return redirect()->route('estudiantes.index')->with('success','Estudiante eliminado correctamente');
     }
+
 }

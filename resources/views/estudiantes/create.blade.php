@@ -22,7 +22,9 @@
 
         <div class="mb-3">
             <label for="telefono" class="form-label">Teléfono</label>
-            <input type="text" name="telefono" class="form-control" required>
+            <input type="text" name="telefono" class="form-control" required
+                   inputmode="numeric" pattern="[0-9]+" maxlength="15"
+                   placeholder="Solo números">
         </div>
 
         <div class="mb-3">
