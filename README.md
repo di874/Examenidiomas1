@@ -9,11 +9,11 @@ Se construyó el controlador EstudianteController, con los métodos esenciales p
 
 Se configuraron las rutas en el archivo principal de Laravel, utilizando la estructura de recurso para conectar automáticamente las acciones del controlador con las direcciones web correspondientes.
 
-Se diseñó la vista principal (index), donde se muestran los estudiantes activos y el historial de los que están pausados, graduados o retirados.
+Se diseñó la vista principal, donde se muestran los estudiantes activos y el historial de los que están pausados, graduados o retirados.
 
-Se elaboró la vista de creación (create), que contiene el formulario para registrar nuevos estudiantes en el sistema.
+Se elaboró la vista de creación, que contiene el formulario para registrar nuevos estudiantes en el sistema.
 
-Se preparó la vista de edición (edit), que permite modificar los datos de un estudiante ya registrado.
+Se preparó la vista de edición, que permite modificar los datos de un estudiante ya registrado.
 
 Se creó un layout base, que sirve como plantilla general para todas las vistas y asegura un diseño uniforme en la aplicación.
 
