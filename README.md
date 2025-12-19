@@ -25,7 +25,7 @@ Finalmente, se inicializó el proyecto en Git, se conectó al repositorio en Git
 
 ###EVIDENCIAS
 
-![Evidencia](images/foto1.png)
-![Evidencia](images/foto2.png)
-![Evidencia](images/foto3.png)
+![Evidencia](public/images/foto1.png)
+![Evidencia](public/images/foto2.png)
+![Evidencia](public/images/foto3.png)
 
